@@ -1,0 +1,5 @@
+Credentials cache: API:E134DD43-20E3-4701-BBA8-7710A6FE4229
+        Principal: armansuy@42NICE.FR
+
+  Issued                Expires               Principal
+Jan 11 14:42:09 2021  Jan 12 00:42:09 2021  krbtgt/42NICE.FR@42NICE.FR
