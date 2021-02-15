@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_print_combn(int n)
 {
@@ -26,21 +25,14 @@ void	ft_print_combn(int n)
 	i = 0;
 	while (++i < n)
 		t[i] = t[i - 1] + 1;
-	while (t[0] < 58 - n)
+	while (t[0] <= 58 - n)
 	{
 		write(1, t, (t[0] == 58 - n ? n : n + 2));
 		i = n;
-		while (--i)
-		{
-			printf("i = %d, n = %d\n", i, n);
+		while (i--)
 			if (t[i]++ <= '9' - n + i)
 				break ;
-		}
+		while (++i && i < n)
+			t[i] = t[i - 1] + 1;
 	}
-}
-
-int main()
-{
-	ft_print_combn(4);
-	return 0;
 }
